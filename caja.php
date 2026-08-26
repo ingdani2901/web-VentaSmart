@@ -23,7 +23,17 @@ function calcularBonoCajero($totalVentas) {
     $porcentaje = 0.02; // 2% de bono
     return $totalVentas * $porcentaje;
 }
+// Calcula el bono del cajero como un porcentaje del total de ventas del corte
+function calcularBonoCajero($totalVentas) {
+    $porcentaje = 0.02; // 2% de bono
+    return $totalVentas * $porcentaje;
+}
 
+// Valida que un retiro de caja no exceda el límite diario permitido
+function validarLimiteRetiro($monto) {
+    $limiteDiario = 10000; // límite máximo de $10,000 por retiro
+    return $monto <= $limiteDiario;
+}
 // Configurar mensajes
 $alertas = [];
 
