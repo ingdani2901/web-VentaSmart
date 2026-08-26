@@ -18,6 +18,11 @@ if ($_SESSION['rol'] != $rol_permitido) {
     header("Location: login.php");
     exit();
 }
+// Calcula el bono del cajero como un porcentaje del total de ventas del corte
+function calcularBonoCajero($totalVentas) {
+    $porcentaje = 0.02; // 2% de bono
+    return $totalVentas * $porcentaje;
+}
 
 // Configurar mensajes
 $alertas = [];
